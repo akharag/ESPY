@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9M-CB-5Dn">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Espy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Closet1" translatesAutoresizingMaskIntoConstraints="NO" id="JnK-tB-OPD">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-xt-ftl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.59412457191780821" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-gZ-OuX">
+                                <rect key="frame" x="113" y="245" width="188" height="47"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                <state key="normal" title="Upload Image">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="F3u-LI-CeI" kind="show" id="iCW-um-4lf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-HB-xJc">
+                                <rect key="frame" x="140" y="337" width="134" height="47"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                <state key="normal" title="Wardrobe">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1dw-fX-ISb" kind="show" id="TT3-5k-QCU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WL-GD-Vhu">
+                                <rect key="frame" x="117.5" y="429" width="179" height="47"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                <state key="normal" title="Outfit Viewer">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RJT-Cq-gwS" kind="show" id="HyP-Cn-Kdz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5t-sJ-h3P">
+                                <rect key="frame" x="155.5" y="153" width="103" height="47"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XWk-wF-3VA" kind="show" id="it7-pt-cXW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PFC-xt-ftl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2YB-m0-bPh"/>
+                            <constraint firstItem="P5t-sJ-h3P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3l3-sA-zDb"/>
+                            <constraint firstItem="xBc-HB-xJc" firstAttribute="top" secondItem="MZW-gZ-OuX" secondAttribute="bottom" constant="45" id="5UM-qN-OFg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PFC-xt-ftl" secondAttribute="trailing" id="BeO-eF-nsK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JnK-tB-OPD" secondAttribute="trailing" id="CjE-66-QvI"/>
+                            <constraint firstItem="P5t-sJ-h3P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="LGN-f5-t0Q"/>
+                            <constraint firstItem="PFC-xt-ftl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lec-p3-FUi"/>
+                            <constraint firstItem="xBc-HB-xJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XPp-DR-6Va"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PFC-xt-ftl" secondAttribute="bottom" id="fqp-zD-X07"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JnK-tB-OPD" secondAttribute="bottom" id="gLM-Lw-7bF"/>
+                            <constraint firstItem="JnK-tB-OPD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iZ6-5I-SHp"/>
+                            <constraint firstItem="MZW-gZ-OuX" firstAttribute="top" secondItem="P5t-sJ-h3P" secondAttribute="bottom" constant="45" id="irz-NZ-59e"/>
+                            <constraint firstItem="JnK-tB-OPD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="juH-Cz-5jE"/>
+                            <constraint firstItem="0WL-GD-Vhu" firstAttribute="top" secondItem="xBc-HB-xJc" secondAttribute="bottom" constant="45" id="kcu-6f-8BJ"/>
+                            <constraint firstItem="MZW-gZ-OuX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vtF-ZY-cYZ"/>
+                            <constraint firstItem="0WL-GD-Vhu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xeF-Nu-fOx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x5v-Kk-nsi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-564"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nUU-lO-HCH">
+            <objects>
+                <viewController id="1dw-fX-ISb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hxZ-tU-xUq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1fy-ri-OC4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x14-1f-ELC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056" y="-645"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bOl-15-vrA">
+            <objects>
+                <viewController id="RJT-Cq-gwS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="APx-kT-gdU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gYH-xl-nuH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgA-FG-eaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2014" y="49"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H3G-Zd-428">
+            <objects>
+                <viewController id="F3u-LI-CeI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PAi-p2-ujV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Idg-dh-ctB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ur-mQ-yLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052" y="-1457"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="406-o4-RQN">
+            <objects>
+                <viewController id="XWk-wF-3VA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jWH-s0-u8P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KP0-9y-Iug"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ks-M9-xdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-1456"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zNk-8P-hgY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t9M-CB-5Dn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lfb-Kg-yEm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xgd-4E-pKN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7E-3U-upu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Closet1" width="420" height="630"/>
+    </resources>
+</document>
