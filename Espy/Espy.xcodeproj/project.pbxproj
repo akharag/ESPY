@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C2030DC1222BA69F005C9A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2030DC0222BA69F005C9A52 /* AppDelegate.swift */; };
-		C2030DC3222BA69F005C9A52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2030DC2222BA69F005C9A52 /* ViewController.swift */; };
 		C2030DC6222BA69F005C9A52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2030DC4222BA69F005C9A52 /* Main.storyboard */; };
 		C2030DC8222BA69F005C9A52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2030DC7222BA69F005C9A52 /* Assets.xcassets */; };
 		C2030DCB222BA69F005C9A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2030DC9222BA69F005C9A52 /* LaunchScreen.storyboard */; };
 		C2030DD6222BA6A0005C9A52 /* EspyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2030DD5222BA6A0005C9A52 /* EspyTests.swift */; };
 		C2030DE1222BA6A0005C9A52 /* EspyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2030DE0222BA6A0005C9A52 /* EspyUITests.swift */; };
+		CD884D2C222E40150024079A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D2B222E40150024079A /* UploadViewController.swift */; };
+		CD884D2E222E40260024079A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D2D222E40260024079A /* NavigationViewController.swift */; };
+		CD884D36222E41070024079A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D35222E41070024079A /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		C2030DBD222BA69F005C9A52 /* Espy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Espy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2030DC0222BA69F005C9A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2030DC2222BA69F005C9A52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2030DC5222BA69F005C9A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2030DC7222BA69F005C9A52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2030DCA222BA69F005C9A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		C2030DDC222BA6A0005C9A52 /* EspyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2030DE0222BA6A0005C9A52 /* EspyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspyUITests.swift; sourceTree = "<group>"; };
 		C2030DE2222BA6A0005C9A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD884D2B222E40150024079A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		CD884D2D222E40260024079A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		CD884D35222E41070024079A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,11 @@
 		C2030DBF222BA69F005C9A52 /* Espy */ = {
 			isa = PBXGroup;
 			children = (
+				CD884D2B222E40150024079A /* UploadViewController.swift */,
 				C2030DC0222BA69F005C9A52 /* AppDelegate.swift */,
-				C2030DC2222BA69F005C9A52 /* ViewController.swift */,
+				CD884D2D222E40260024079A /* NavigationViewController.swift */,
 				C2030DC4222BA69F005C9A52 /* Main.storyboard */,
+				CD884D35222E41070024079A /* MainMenuViewController.swift */,
 				C2030DC7222BA69F005C9A52 /* Assets.xcassets */,
 				C2030DC9222BA69F005C9A52 /* LaunchScreen.storyboard */,
 				C2030DCC222BA69F005C9A52 /* Info.plist */,
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2030DC3222BA69F005C9A52 /* ViewController.swift in Sources */,
+				CD884D36222E41070024079A /* MainMenuViewController.swift in Sources */,
+				CD884D2E222E40260024079A /* NavigationViewController.swift in Sources */,
 				C2030DC1222BA69F005C9A52 /* AppDelegate.swift in Sources */,
+				CD884D2C222E40150024079A /* UploadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
