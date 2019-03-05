@@ -29,16 +29,13 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-gZ-OuX">
                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="47"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="188" id="lAZ-Ys-CGK"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                                 <state key="normal" title="Upload Image">
                                                     <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7U-c1-RXP"/>
-                                                    <segue destination="F3u-LI-CeI" kind="show" id="iCW-um-4lf"/>
+                                                    <segue destination="F3u-LI-CeI" kind="show" identifier="segue" id="iCW-um-4lf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-HB-xJc">
@@ -142,7 +139,7 @@
                         <viewLayoutGuide key="safeArea" id="Idg-dh-ctB"/>
                     </view>
                     <connections>
-                        <outlet property="ImageView" destination="z5u-X8-b2V" id="hgQ-bT-qOJ"/>
+                        <outlet property="ImageView" destination="z5u-X8-b2V" id="7LS-l6-CPv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ur-mQ-yLP" userLabel="First Responder" sceneMemberID="firstResponder"/>

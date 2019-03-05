@@ -11,10 +11,11 @@ import UIKit
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     @IBOutlet weak var ImageView: UIImageView!
-    
+    var previewImage : UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ImageView.image = previewImage
     }
     
     
