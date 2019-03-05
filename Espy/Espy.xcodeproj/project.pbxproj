@@ -16,6 +16,7 @@
 		CD884D2C222E40150024079A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D2B222E40150024079A /* UploadViewController.swift */; };
 		CD884D2E222E40260024079A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D2D222E40260024079A /* NavigationViewController.swift */; };
 		CD884D36222E41070024079A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D35222E41070024079A /* MainMenuViewController.swift */; };
+		CD884D3A222E558E0024079A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D39222E558E0024079A /* GalleryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CD884D2B222E40150024079A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		CD884D2D222E40260024079A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		CD884D35222E41070024079A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		CD884D39222E558E0024079A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 		C2030DBF222BA69F005C9A52 /* Espy */ = {
 			isa = PBXGroup;
 			children = (
+				CD884D2D222E40260024079A /* NavigationViewController.swift */,
+				CD884D35222E41070024079A /* MainMenuViewController.swift */,
+				CD884D39222E558E0024079A /* GalleryViewController.swift */,
 				CD884D2B222E40150024079A /* UploadViewController.swift */,
 				C2030DC0222BA69F005C9A52 /* AppDelegate.swift */,
-				CD884D2D222E40260024079A /* NavigationViewController.swift */,
 				C2030DC4222BA69F005C9A52 /* Main.storyboard */,
-				CD884D35222E41070024079A /* MainMenuViewController.swift */,
 				C2030DC7222BA69F005C9A52 /* Assets.xcassets */,
 				C2030DC9222BA69F005C9A52 /* LaunchScreen.storyboard */,
 				C2030DCC222BA69F005C9A52 /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				CD884D36222E41070024079A /* MainMenuViewController.swift in Sources */,
 				CD884D2E222E40260024079A /* NavigationViewController.swift in Sources */,
+				CD884D3A222E558E0024079A /* GalleryViewController.swift in Sources */,
 				C2030DC1222BA69F005C9A52 /* AppDelegate.swift in Sources */,
 				CD884D2C222E40150024079A /* UploadViewController.swift in Sources */,
 			);

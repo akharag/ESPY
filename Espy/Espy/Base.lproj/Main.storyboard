@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="1148" y="-564"/>
         </scene>
-        <!--View Controller-->
+        <!--Gallery View Controller-->
         <scene sceneID="nUU-lO-HCH">
             <objects>
-                <viewController id="1dw-fX-ISb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dw-fX-ISb" customClass="GalleryViewController" customModule="Espy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hxZ-tU-xUq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,12 +130,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-X8-b2V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-X8-b2V">
                                 <rect key="frame" x="0.0" y="88" width="414" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="414" id="Lps-aV-C6U"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="STj-Qm-vPB">
+                                <rect key="frame" x="109" y="636" width="196" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uke-XK-97g">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <state key="normal" title="Top"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="TopPresed:" destination="F3u-LI-CeI" eventType="touchUpInside" id="CO3-Ib-OtV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCz-zm-dli">
+                                        <rect key="frame" x="66" y="0.0" width="51" height="30"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Bottom"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="BottomPressed:" destination="F3u-LI-CeI" eventType="touchUpInside" id="G3I-FP-zYL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAQ-os-flr">
+                                        <rect key="frame" x="153" y="0.0" width="43" height="30"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Shoes"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ShoesPressed:" destination="F3u-LI-CeI" eventType="touchUpInside" id="8ph-un-dME"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAl-ye-GY1">
+                                <rect key="frame" x="190" y="744" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="SavePressed:" destination="F3u-LI-CeI" eventType="touchUpInside" id="SBA-qv-2K6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Idg-dh-ctB" firstAttribute="bottom" secondItem="STj-Qm-vPB" secondAttribute="bottom" constant="196" id="8tg-8Q-s89"/>
+                            <constraint firstItem="yAl-ye-GY1" firstAttribute="top" secondItem="STj-Qm-vPB" secondAttribute="bottom" constant="78" id="DkW-O0-1JZ"/>
+                            <constraint firstItem="STj-Qm-vPB" firstAttribute="centerX" secondItem="PAi-p2-ujV" secondAttribute="centerX" id="Elf-U9-7ki"/>
+                            <constraint firstItem="z5u-X8-b2V" firstAttribute="top" secondItem="Idg-dh-ctB" secondAttribute="top" id="PNC-sI-B7K"/>
+                            <constraint firstItem="STj-Qm-vPB" firstAttribute="centerX" secondItem="z5u-X8-b2V" secondAttribute="centerX" id="QIh-WZ-ltU"/>
+                            <constraint firstItem="yAl-ye-GY1" firstAttribute="centerX" secondItem="STj-Qm-vPB" secondAttribute="centerX" id="rzU-Md-hVB"/>
+                            <constraint firstItem="z5u-X8-b2V" firstAttribute="leading" secondItem="PAi-p2-ujV" secondAttribute="leading" id="tW9-MR-CkX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Idg-dh-ctB"/>
                     </view>
                     <connections>

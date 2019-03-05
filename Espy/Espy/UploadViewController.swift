@@ -12,10 +12,28 @@ import UIKit
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     @IBOutlet weak var ImageView: UIImageView!
     var previewImage : UIImage?
+    var tag : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ImageView.image = previewImage
+    }
+    
+    @IBAction func TopPresed(_ sender: Any) {
+        /*CHANGE TAG TO TOP*/
+    }
+    @IBAction func BottomPressed(_ sender: Any) {
+        /*CHANGE TAG TO BOTTOM*/
+    }
+    @IBAction func ShoesPressed(_ sender: Any) {
+        /*CHANGE TAG TO BOTTOM*/
+    }
+    /*It would be nice if the buttons changed colors to represent that it was pressed
+     if another button was pressed, and if another button was pressed before the
+     image is saved then the previous button will revert to it's previous color*/
+    
+    @IBAction func SavePressed(_ sender: Any) {
+        /*SAVE IMAGE AND RETURN TO MAIN MENU*/
     }
     
     
