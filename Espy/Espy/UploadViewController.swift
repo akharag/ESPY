@@ -21,6 +21,16 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     
     @IBAction func TopPresed(_ sender: Any) {
         /*CHANGE TAG TO TOP*/
+        let image = ImageView.image
+        let imageData:NSData = image!.pngData()! as NSData
+        
+        UserDefaults.standard.set(imageData, forKey: "savedImage")
+        
+        let data = UserDefaults.standard.object(forKey: "savedImage") as! NSData
+        
+        ImageView.image = UIImage(data: data as Data)
+        
+        
     }
     @IBAction func BottomPressed(_ sender: Any) {
         /*CHANGE TAG TO BOTTOM*/
