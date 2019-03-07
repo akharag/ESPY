@@ -27,7 +27,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="io4-xQ-M1m">
                                         <rect key="frame" x="113" y="272" width="188" height="230"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-gZ-OuX">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-gZ-OuX">
                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="47"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                                 <state key="normal" title="Upload Image">
@@ -35,7 +35,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7U-c1-RXP"/>
-                                                    <segue destination="F3u-LI-CeI" kind="show" identifier="segue" id="iCW-um-4lf"/>
+                                                    <segue destination="F3u-LI-CeI" kind="show" identifier="segueToUpload" id="iCW-um-4lf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-HB-xJc">
@@ -206,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ur-mQ-yLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2037.68115942029" y="-565.17857142857144"/>
+            <point key="canvasLocation" x="2142" y="-565"/>
         </scene>
         <!--Navigation Viewcontroller-->
         <scene sceneID="zNk-8P-hgY">

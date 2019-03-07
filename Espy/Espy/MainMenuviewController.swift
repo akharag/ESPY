@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 
 class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
     var image : UIImage?
+    //var clothingArray : [clothing] = []
+    var dataBuffer : NSData?
+    var tagBuffer : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -61,7 +64,7 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
             image = originalImage
         }
         
-        performSegue(withIdentifier: "segue", sender: Any?.self)
+        performSegue(withIdentifier: "segueToUpload", sender: Any?.self)
         
         picker.dismiss(animated: true, completion: nil)
     }

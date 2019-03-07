@@ -8,11 +8,14 @@
 
 import Foundation
 import UIKit
-
+//https://www.youtube.com/watch?v=PWgRz4jqICI
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     @IBOutlet weak var ImageView: UIImageView!
     var previewImage : UIImage?
-    var tag : String?
+    var data = Data()
+    var tag : String = ""
+    var fileName : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,22 +24,15 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     
     @IBAction func TopPresed(_ sender: Any) {
         /*CHANGE TAG TO TOP*/
-        let image = ImageView.image
-        let imageData:NSData = image!.pngData()! as NSData
-        
-        UserDefaults.standard.set(imageData, forKey: "savedImage")
-        
-        let data = UserDefaults.standard.object(forKey: "savedImage") as! NSData
-        
-        ImageView.image = UIImage(data: data as Data)
-        
-        
+        tag = "top"
     }
     @IBAction func BottomPressed(_ sender: Any) {
         /*CHANGE TAG TO BOTTOM*/
+        tag = "bottom"
     }
     @IBAction func ShoesPressed(_ sender: Any) {
         /*CHANGE TAG TO BOTTOM*/
+        tag = "shoes"
     }
     /*It would be nice if the buttons changed colors to represent that it was pressed
      if another button was pressed, and if another button was pressed before the
@@ -44,7 +40,28 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     
     @IBAction func SavePressed(_ sender: Any) {
         /*SAVE IMAGE AND RETURN TO MAIN MENU*/
+        print("Save Button Pressed")
+        let image = ImageView.image
+        let imageData:Data = image!.pngData()! as Data
+        
+        UserDefaults.standard.set(imageData, forKey: "savedImage")
+        
+        data = UserDefaults.standard.object(forKey: "savedImage") as! Data
+        
+        //Save data with tag to json file here
+        let str = String("")
+        
+        
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        //Bundle.main.url(forResource: "clothing", withExtension: "json")
+        
+        //performSegue(withIdentifier: "uploadToMainMenu", sender: Any?.self)
     }
     
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let nextController = segue.destination as! MainMenuViewController
+//        nextController.dataBuffer = data
+//        nextController.tagBuffer = tag
+//    }
 }
