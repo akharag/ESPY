@@ -13,7 +13,6 @@
 		C2030DCB222BA69F005C9A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2030DC9222BA69F005C9A52 /* LaunchScreen.storyboard */; };
 		C2030DD6222BA6A0005C9A52 /* EspyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2030DD5222BA6A0005C9A52 /* EspyTests.swift */; };
 		C2030DE1222BA6A0005C9A52 /* EspyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2030DE0222BA6A0005C9A52 /* EspyUITests.swift */; };
-		CD7460F12230E1D900D824F5 /* JsonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7460F02230E1D900D824F5 /* JsonHandler.swift */; };
 		CD7460F32230F2A900D824F5 /* wardrobe.json in Resources */ = {isa = PBXBuildFile; fileRef = CD7460F22230F2A900D824F5 /* wardrobe.json */; };
 		CD884D2C222E40150024079A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D2B222E40150024079A /* UploadViewController.swift */; };
 		CD884D2E222E40260024079A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D2D222E40260024079A /* NavigationViewController.swift */; };
@@ -51,8 +50,7 @@
 		C2030DDC222BA6A0005C9A52 /* EspyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2030DE0222BA6A0005C9A52 /* EspyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspyUITests.swift; sourceTree = "<group>"; };
 		C2030DE2222BA6A0005C9A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD7460F02230E1D900D824F5 /* JsonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandler.swift; sourceTree = "<group>"; };
-		CD7460F22230F2A900D824F5 /* wardrobe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wardrobe.json; path = ../../wardrobe.json; sourceTree = "<group>"; };
+		CD7460F22230F2A900D824F5 /* wardrobe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wardrobe.json; path = ../../../wardrobe.json; sourceTree = "<group>"; };
 		CD884D2B222E40150024079A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		CD884D2D222E40260024079A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		CD884D35222E41070024079A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				CD884D35222E41070024079A /* MainMenuViewController.swift */,
 				CD884D39222E558E0024079A /* GalleryViewController.swift */,
 				CD884D2B222E40150024079A /* UploadViewController.swift */,
-				CD7460F02230E1D900D824F5 /* JsonHandler.swift */,
 				C2030DC0222BA69F005C9A52 /* AppDelegate.swift */,
 				CD7460F22230F2A900D824F5 /* wardrobe.json */,
 				C2030DC4222BA69F005C9A52 /* Main.storyboard */,
@@ -276,7 +273,6 @@
 				CD884D2E222E40260024079A /* NavigationViewController.swift in Sources */,
 				CD884D3A222E558E0024079A /* GalleryViewController.swift in Sources */,
 				C2030DC1222BA69F005C9A52 /* AppDelegate.swift in Sources */,
-				CD7460F12230E1D900D824F5 /* JsonHandler.swift in Sources */,
 				CD884D2C222E40150024079A /* UploadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

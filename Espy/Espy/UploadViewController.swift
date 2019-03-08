@@ -14,7 +14,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     var previewImage : UIImage?
     var data = Data()
     var tag : String = ""
-    var fileName : String = ""
+    var fileName : String = "wardrobe.txt"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +48,16 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
         
         data = UserDefaults.standard.object(forKey: "savedImage") as! Data
         
+        let DocumentDirectoryURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        let fileURL = DocumentDirectoryURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+        print("File Path:  \(fileURL.path)")
+        
+        //let writeString = data as String
+        do{
+            try writeString.write()
+        }
         //Save data with tag to json file here
-        let str = String("")
+        //let str = String("")
         
         
         navigationController?.popViewController(animated: true)
