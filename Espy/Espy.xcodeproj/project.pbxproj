@@ -52,7 +52,7 @@
 		C2030DE0222BA6A0005C9A52 /* EspyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspyUITests.swift; sourceTree = "<group>"; };
 		C2030DE2222BA6A0005C9A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7460F02230E1D900D824F5 /* JsonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandler.swift; sourceTree = "<group>"; };
-		CD7460F22230F2A900D824F5 /* wardrobe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wardrobe.json; path = ../../wardrobe.json; sourceTree = "<group>"; };
+		CD7460F22230F2A900D824F5 /* wardrobe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wardrobe.json; path = ../../../wardrobe.json; sourceTree = "<group>"; };
 		CD884D2B222E40150024079A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		CD884D2D222E40260024079A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		CD884D35222E41070024079A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
