@@ -13,5 +13,8 @@ class GalleryViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let clothingFile = try! [Clothing](filename: "wardrobe.json")
+        print(clothingFile[0].tag)
     }
+    
 }

@@ -11,7 +11,6 @@ import UIKit
 
 class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var image : UIImage?
-    //var clothingArray : [clothing] = []
     var dataBuffer : NSData?
     var tagBuffer : String?
     
@@ -51,10 +50,11 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
         self.present(actionSheet, animated: true, completion: nil)
         
     }
-    
+    @IBAction func wardrobePressed(_ sender: Any){
+        
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
-        
         if let croppedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             print("Edited")
             image = croppedImage
@@ -70,11 +70,9 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextController = segue.destination as! UploadViewController
-        nextController.previewImage = image
+        if let nextController = segue.destination as? UploadViewController {
+            nextController.previewImage = image        }
     }
-
-    
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)

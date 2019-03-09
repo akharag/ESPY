@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 //https://www.youtube.com/watch?v=PWgRz4jqICI
+
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     @IBOutlet weak var ImageView: UIImageView!
     var previewImage : UIImage?
@@ -47,17 +48,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
         UserDefaults.standard.set(imageData, forKey: "savedImage")
         
         data = UserDefaults.standard.object(forKey: "savedImage") as! Data
-        
-        let DocumentDirectoryURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        let fileURL = DocumentDirectoryURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-        print("File Path:  \(fileURL.path)")
-        
-        //let writeString = data as String
-        do{
-            try writeString.write()
-        }
-        //Save data with tag to json file here
-        //let str = String("")
         
         
         navigationController?.popViewController(animated: true)

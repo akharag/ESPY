@@ -45,6 +45,7 @@
                                                     <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="wardrobePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rn6-e5-R5b"/>
                                                     <segue destination="1dw-fX-ISb" kind="show" id="TT3-5k-QCU"/>
                                                 </connections>
                                             </button>
@@ -90,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="-564"/>
+            <point key="canvasLocation" x="2057.971014492754" y="-564.50892857142856"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="nUU-lO-HCH">
@@ -105,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x14-1f-ELC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="167"/>
+            <point key="canvasLocation" x="2057.971014492754" y="164.73214285714286"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bOl-15-vrA">
@@ -120,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgA-FG-eaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="167"/>
+            <point key="canvasLocation" x="1043" y="166"/>
         </scene>
         <!--Upload View Controller-->
         <scene sceneID="H3G-Zd-428">
@@ -130,12 +131,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-X8-b2V">
-                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="414" id="Lps-aV-C6U"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="STj-Qm-vPB">
                                 <rect key="frame" x="109" y="636" width="196" height="30"/>
                                 <subviews>
@@ -187,6 +182,12 @@
                                     <action selector="SavePressed:" destination="F3u-LI-CeI" eventType="touchUpInside" id="SBA-qv-2K6"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-X8-b2V">
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="414" id="Lps-aV-C6U"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -206,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ur-mQ-yLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="-565"/>
+            <point key="canvasLocation" x="3050.7246376811595" y="-565.17857142857144"/>
         </scene>
         <!--Navigation Viewcontroller-->
         <scene sceneID="zNk-8P-hgY">
@@ -224,7 +225,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7E-3U-upu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="1043.4782608695652" y="-564.50892857142856"/>
         </scene>
     </scenes>
     <resources>
