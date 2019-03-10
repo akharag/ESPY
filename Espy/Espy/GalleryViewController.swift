@@ -17,20 +17,25 @@ class GalleryViewController : UIViewController {
 
         var loadItems = [Clothing]()
         var images = [UIImage]()
-        print(loadItems.count)
+        //print(loadItems.count)
 
         do{
-            try loadItems.loadFromJSONFile(filename: "wardrobe")
+            loadItems = try loadFromJSONFile(filename: "wardrobe")
+            print(loadItems.count)
             
         } catch let error {
             print("Error Occured Loading File: \(error)")
         }
-        for i in 0...loadItems.count-1 {
-            if let data = Data(base64Encoded: loadItems[i].image, options: .ignoreUnknownCharacters){
-                images[i] = UIImage(data: data)!
+        if loadItems.count > 0{
+            for i in 0...loadItems.count-1 {
+                if let data = Data(base64Encoded: loadItems[i].image, options: .ignoreUnknownCharacters){
+                    images.append(UIImage(data: data)!)
+                }
             }
+            galleryImageView.image = images[0]
         }
-        galleryImageView.image = images[0]
+        
+        
         
     }
     

@@ -44,12 +44,13 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
         if tag != ""{
             print("Save Button Pressed")
             let image = ImageView.image
-            
-            let imageData = image!.jpegData(compressionQuality: 0.5)! as Data
+            //convert image to string
+            let imageData = image!.jpegData(compressionQuality: 0.01)! as Data
             let imageString = imageData.base64EncodedString(options: .endLineWithLineFeed)
-
+            //save clothing item to wardrobe
             let newClothing = Clothing(inputTag: tag, inputImage: imageString)
             wardrobeItems.append(newClothing)
+            //save clothing item to file
             saveToJSON(clothingArr: wardrobeItems, filename: "wardrobe")
             
             navigationController?.popViewController(animated: true)

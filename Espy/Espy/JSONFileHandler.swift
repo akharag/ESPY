@@ -8,68 +8,39 @@
 import Foundation
 import UIKit
 
-//https://www.youtube.com/watch?v=YY3bTxgxWss
 struct Clothing : Codable{
-   
-    enum DecodingError : Error {
-        case missingFile
-    }
     
     let tag : String
     let image : String
-    
-    init(filename: String) throws{
-        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
-            throw DecodingError.missingFile
-        }
-        let decoder = JSONDecoder()
-        let data = try Data(contentsOf: url)
-        self = try decoder.decode(Clothing.self, from: data)
-    }
     
     init(inputTag: String, inputImage: String){
         tag = inputTag
         image = inputImage
     }
-    
-    mutating func loadFromJSONFile(filename: String) throws{
-        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
-        throw DecodingError.missingFile
-        }
-        let decoder = JSONDecoder()
-        let data = try Data(contentsOf: url)
-        self = try decoder.decode(Clothing.self, from: data)
-    }
 }
 
 extension Array where Element == Clothing {
     init(filename: String) throws {
-        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
-            throw Clothing.DecodingError.missingFile
-        }
-        print(url)
-        let decoder = JSONDecoder()
-        let data = try Data(contentsOf: url)
-        self = try decoder.decode([Clothing].self, from: data)
+        self = try loadFromJSONFile(filename: filename)
     }
-//    mutating func loadFromJSONFile(filename: String) throws{
-//        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
-//        throw Clothing.DecodingError.missingFile
-//        }
-//        let decoder = JSONDecoder()
-//        let data = try Data(contentsOf: url)
-//        self = try decoder.decode([Clothing].self, from: data)
-//    }
 }
 
 func loadFromJSONFile(filename: String) throws -> [Clothing]!{
+    var clothingData:Data! = nil
+    //find file
     var fileURL:URL!
     let baseURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-    fileURL = baseURL.appendingPathComponent("wardrobe.json")
-    
-    let data = try Data(contentsOf: fileURL)
-    
-    let clothingArr = decodeJSON(data: data)
+    fileURL = baseURL.appendingPathComponent(filename).appendingPathExtension("json")
+    //convert file to string
+    let fileString = try! String(contentsOf: fileURL)
+    //because the file is in base64, it must be decoded and converted back to data
+    if let data = Data(base64Encoded: fileString, options: .ignoreUnknownCharacters) {
+        let convertString = String(data: data, encoding: .utf8)
+        print(convertString!)
+        clothingData = Data(convertString!.utf8)
+    }
+    //decode the data
+    let clothingArr = decodeJSON(data: clothingData)
     
     return clothingArr
 }
@@ -78,14 +49,14 @@ func saveToJSON(clothingArr: [Clothing], filename: String) {
     let wardrobe = encodeJSON(arr: clothingArr)
     var fileURL:URL!
     
-    let baseURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-    fileURL = baseURL.appendingPathComponent("wardrobe.json")
+    let baseURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+    fileURL = baseURL.appendingPathComponent(filename).appendingPathExtension("json")
     
     let dataString = wardrobe!.base64EncodedString(options: .endLineWithLineFeed)
     do{
         try dataString.write(to: fileURL, atomically: true, encoding: .utf8)
     }catch let error as NSError{
-        print("Error saving to file: \(error)")
+        print("Error saving to file: \(error.localizedDescription)")
     }
 }
 
@@ -109,34 +80,5 @@ func decodeJSON(data: Data!) -> [Clothing]!{
     
     return arr
 }
-
-//func saveToJSONFile(arr: [Clothing], filename: String){
-//    var fileText : String = ""
-//
-//    print("\(filename)")
-//    let fileURL = Bundle.main.url(forResource: filename, withExtension: "json")!
-//    print("\(filename.debugDescription)")
-//
-//
-//    fileText += "[\n"
-//    for i in 0...arr.count-1{
-//        fileText += "\t{\n\t\"tag\" : \"" + arr[i].tag + "\"\n"
-//        fileText += "\t\"image\" : \"" + arr[i].image + "\"\n\t}\n"
-//        if i < arr.count-1{
-//            fileText += ",\n"
-//        }
-//    }
-//    fileText += "]"
-//
-//    let filedata:Data = fileText.data(using: .utf8)!
-//
-//    print(fileText)
-//    //    do{
-//    //        try fileText.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-//    //    }catch let error as NSError{
-//    //        print("Failed to write to URL: \(String(describing: fileURL)) ")
-//    //        print(error)
-//    //    }
-//}
 
 var wardrobeItems = [Clothing]()
