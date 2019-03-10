@@ -50,7 +50,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
 
             let newClothing = Clothing(inputTag: tag, inputImage: imageString)
             wardrobeItems.append(newClothing)
-            saveToJSONFile(arr: wardrobeItems, filename: "wardrobe")
+            saveToJSON(clothingArr: wardrobeItems, filename: "wardrobe")
             
             navigationController?.popViewController(animated: true)
             dismiss(animated: true, completion: nil)
