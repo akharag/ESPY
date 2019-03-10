@@ -17,13 +17,18 @@ struct Clothing : Decodable{
     let tag : String
     let image : Data
     
-    init(filename: String) throws {
+    init(filename: String) throws{
         guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
             throw DecodingError.missingFile
         }
         let decoder = JSONDecoder()
         let data = try Data(contentsOf: url)
         self = try decoder.decode(Clothing.self, from: data)
+    }
+    
+    init(inputTag: String, inputData: Data){
+        tag = inputTag
+        image = inputData
     }
 }
 
@@ -37,3 +42,5 @@ extension Array where Element == Clothing {
         self = try decoder.decode([Clothing].self, from: data)
     }
 }
+
+var wardrobeItems = [Clothing]()
