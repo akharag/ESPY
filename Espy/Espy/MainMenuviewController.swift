@@ -11,7 +11,7 @@ import UIKit
 
 class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var image : UIImage?
-    var dataBuffer : NSData?
+    var dataBuffer : Data?
     var tagBuffer : String?
     
     override func viewDidLoad() {

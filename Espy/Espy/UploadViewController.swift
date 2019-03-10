@@ -41,25 +41,22 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     
     @IBAction func SavePressed(_ sender: Any) {
         /*SAVE IMAGE AND RETURN TO MAIN MENU*/
-        print("Save Button Pressed")
-        let image = ImageView.image
-        let imageData:Data = image!.pngData()! as Data
-        
-        UserDefaults.standard.set(imageData, forKey: "savedImage")
-        
-        data = UserDefaults.standard.object(forKey: "savedImage") as! Data
-        
-        
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
-        //Bundle.main.url(forResource: "clothing", withExtension: "json")
-        
-        //performSegue(withIdentifier: "uploadToMainMenu", sender: Any?.self)
+        if tag != ""{
+            print("Save Button Pressed")
+            let image = ImageView.image
+            
+            let imageData = image!.jpegData(compressionQuality: 0.5)! as Data
+            let imageString = imageData.base64EncodedString(options: .endLineWithLineFeed)
+
+            let newClothing = Clothing(inputTag: tag, inputImage: imageString)
+            wardrobeItems.append(newClothing)
+            saveToJSONFile(arr: wardrobeItems, filename: "wardrobe")
+            
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }
+        else{
+            print("no tag chosen")
+        }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let nextController = segue.destination as! MainMenuViewController
-//        nextController.dataBuffer = data
-//        nextController.tagBuffer = tag
-//    }
 }
