@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9M-CB-5Dn">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,63 +15,55 @@
             <objects>
                 <viewController storyboardIdentifier="MainMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="Espy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Closet1" translatesAutoresizingMaskIntoConstraints="NO" id="JnK-tB-OPD">
-                                <rect key="frame" x="-6" y="88" width="420" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="420" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-xt-ftl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="io4-xQ-M1m">
-                                        <rect key="frame" x="113" y="272" width="188" height="230"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-gZ-OuX">
-                                                <rect key="frame" x="0.0" y="0.0" width="188" height="47"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
-                                                <state key="normal" title="Upload Image">
-                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7U-c1-RXP"/>
-                                                    <segue destination="F3u-LI-CeI" kind="show" identifier="segueToUpload" id="iCW-um-4lf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-HB-xJc">
-                                                <rect key="frame" x="27" y="92" width="134" height="46"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
-                                                <state key="normal" title="Wardrobe">
-                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="1dw-fX-ISb" kind="show" id="TT3-5k-QCU"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WL-GD-Vhu">
-                                                <rect key="frame" x="4.5" y="183" width="179" height="47"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
-                                                <state key="normal" title="Outfit Viewer">
-                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="RJT-Cq-gwS" kind="show" id="HyP-Cn-Kdz"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="0WL-GD-Vhu" firstAttribute="centerX" secondItem="io4-xQ-M1m" secondAttribute="centerX" id="4f7-AC-McT"/>
-                                            <constraint firstItem="xBc-HB-xJc" firstAttribute="centerX" secondItem="io4-xQ-M1m" secondAttribute="centerX" id="Yfh-Gw-kEg"/>
-                                            <constraint firstItem="MZW-gZ-OuX" firstAttribute="centerX" secondItem="io4-xQ-M1m" secondAttribute="centerX" id="zpH-Ai-5c6"/>
-                                        </constraints>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-gZ-OuX">
+                                        <rect key="frame" x="113" y="255" width="188" height="47"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                        <state key="normal" title="Upload Image">
+                                            <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7U-c1-RXP"/>
+                                            <segue destination="F3u-LI-CeI" kind="show" identifier="segueToUpload" id="iCW-um-4lf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-HB-xJc">
+                                        <rect key="frame" x="140" y="332" width="134" height="47"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                        <state key="normal" title="Wardrobe">
+                                            <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="1dw-fX-ISb" kind="show" id="TT3-5k-QCU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WL-GD-Vhu">
+                                        <rect key="frame" x="117.66666666666669" y="409" width="179" height="47"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                        <state key="normal" title="Outfit Viewer">
+                                            <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RJT-Cq-gwS" kind="show" id="HyP-Cn-Kdz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.59412457191780821" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="xBc-HB-xJc" firstAttribute="leading" secondItem="PFC-xt-ftl" secondAttribute="leading" constant="140" id="6Ji-fo-MZT"/>
-                                    <constraint firstAttribute="trailing" secondItem="xBc-HB-xJc" secondAttribute="trailing" constant="140" id="9sp-Mk-Ed0"/>
-                                    <constraint firstItem="io4-xQ-M1m" firstAttribute="top" secondItem="PFC-xt-ftl" secondAttribute="top" constant="272" id="MRL-ul-Qnr"/>
-                                    <constraint firstItem="io4-xQ-M1m" firstAttribute="centerY" secondItem="PFC-xt-ftl" secondAttribute="centerY" id="xaZ-h4-RwK"/>
+                                    <constraint firstItem="xBc-HB-xJc" firstAttribute="top" secondItem="MZW-gZ-OuX" secondAttribute="bottom" constant="30" id="9eO-Js-7QU"/>
+                                    <constraint firstItem="MZW-gZ-OuX" firstAttribute="top" secondItem="PFC-xt-ftl" secondAttribute="top" constant="255" id="Hjt-JP-1YJ"/>
+                                    <constraint firstItem="0WL-GD-Vhu" firstAttribute="centerX" secondItem="PFC-xt-ftl" secondAttribute="centerX" id="JI1-5Q-0l2"/>
+                                    <constraint firstItem="MZW-gZ-OuX" firstAttribute="centerX" secondItem="PFC-xt-ftl" secondAttribute="centerX" id="KAL-V7-a2e"/>
+                                    <constraint firstItem="xBc-HB-xJc" firstAttribute="centerX" secondItem="PFC-xt-ftl" secondAttribute="centerX" id="ZzD-au-3uk"/>
+                                    <constraint firstItem="0WL-GD-Vhu" firstAttribute="top" secondItem="xBc-HB-xJc" secondAttribute="bottom" constant="30" id="rgD-N1-7Di"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -79,9 +71,11 @@
                         <constraints>
                             <constraint firstItem="PFC-xt-ftl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3vQ-93-m4A"/>
                             <constraint firstItem="PFC-xt-ftl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Gx-dA-2hn"/>
-                            <constraint firstItem="PFC-xt-ftl" firstAttribute="bottom" secondItem="JnK-tB-OPD" secondAttribute="bottom" id="G2V-nD-Bos"/>
-                            <constraint firstItem="PFC-xt-ftl" firstAttribute="top" secondItem="JnK-tB-OPD" secondAttribute="top" id="pDO-IO-Rxe"/>
-                            <constraint firstItem="JnK-tB-OPD" firstAttribute="trailing" secondItem="PFC-xt-ftl" secondAttribute="trailing" id="slt-NM-wbs"/>
+                            <constraint firstAttribute="bottom" secondItem="JnK-tB-OPD" secondAttribute="bottom" id="4Vb-V7-j2Q"/>
+                            <constraint firstItem="JnK-tB-OPD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Aw5-Xe-gfW"/>
+                            <constraint firstItem="JnK-tB-OPD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WVt-Mb-lDa"/>
+                            <constraint firstItem="PFC-xt-ftl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="avD-TS-Q1d"/>
+                            <constraint firstAttribute="trailing" secondItem="JnK-tB-OPD" secondAttribute="trailing" constant="-6" id="cEb-pV-y6Q"/>
                             <constraint firstItem="PFC-xt-ftl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vcG-sI-NJo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -97,7 +91,7 @@
             <objects>
                 <viewController storyboardIdentifier="GalleryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dw-fX-ISb" customClass="GalleryViewController" customModule="Espy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hxZ-tU-xUq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1fy-ri-OC4"/>
@@ -112,7 +106,7 @@
             <objects>
                 <viewController id="RJT-Cq-gwS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="APx-kT-gdU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gYH-xl-nuH"/>
@@ -127,17 +121,17 @@
             <objects>
                 <viewController storyboardIdentifier="UploadViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F3u-LI-CeI" customClass="UploadViewController" customModule="Espy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PAi-p2-ujV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-X8-b2V">
-                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="414" id="Lps-aV-C6U"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="STj-Qm-vPB">
-                                <rect key="frame" x="109" y="636" width="196" height="30"/>
+                                <rect key="frame" x="109" y="510" width="196" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uke-XK-97g">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -181,7 +175,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAl-ye-GY1">
-                                <rect key="frame" x="190" y="744" width="34" height="30"/>
+                                <rect key="frame" x="190" y="618" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="SavePressed:" destination="F3u-LI-CeI" eventType="touchUpInside" id="SBA-qv-2K6"/>
@@ -214,7 +208,7 @@
                 <navigationController storyboardIdentifier="NavigationViewcontroller" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t9M-CB-5Dn" customClass="NavigationViewcontroller" customModule="Espy" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lfb-Kg-yEm">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

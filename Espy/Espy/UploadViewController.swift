@@ -53,9 +53,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
         print("File Path:  \(fileURL.path)")
         
         //let writeString = data as String
-        do{
-            try writeString.write()
-        }
+        //do{
+          //  try writeString.write()
+        //}
         //Save data with tag to json file here
         //let str = String("")
         
