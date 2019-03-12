@@ -109,9 +109,9 @@
 			children = (
 				CD884D2D222E40260024079A /* NavigationViewController.swift */,
 				CD884D35222E41070024079A /* MainMenuViewController.swift */,
+				CD884D2B222E40150024079A /* UploadViewController.swift */,
 				CD884D39222E558E0024079A /* GalleryViewController.swift */,
 				CD374304223343C000E830D9 /* JSONFileHandler.swift */,
-				CD884D2B222E40150024079A /* UploadViewController.swift */,
 				C2030DC0222BA69F005C9A52 /* AppDelegate.swift */,
 				C2030DC4222BA69F005C9A52 /* Main.storyboard */,
 				C2030DC7222BA69F005C9A52 /* Assets.xcassets */,

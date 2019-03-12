@@ -57,11 +57,9 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
         if let croppedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
-            print("Edited")
             image = croppedImage
         }
         else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            print("No Change")
             image = originalImage
         }
         
