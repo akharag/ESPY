@@ -31,6 +31,7 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
             {
                 imagePickerController.sourceType = .camera
                 self.present(imagePickerController, animated: true, completion: nil)
+                imagePickerController.allowsEditing = true
             }
                 
             else
