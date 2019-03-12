@@ -17,12 +17,9 @@ class GalleryViewController : UIViewController {
 
         var loadItems = [Clothing]()
         var images = [UIImage]()
-        //print(loadItems.count)
 
         do{
             loadItems = try loadFromJSONFile(filename: "wardrobe")
-            print(loadItems.count)
-            
         } catch let error {
             print("Error Occured Loading File: \(error)")
         }

@@ -36,7 +36,6 @@ func loadFromJSONFile(filename: String) throws -> [Clothing]!{
     //because the file is in base64, it must be decoded and converted back to data
     if let data = Data(base64Encoded: fileString, options: .ignoreUnknownCharacters) {
         let convertString = String(data: data, encoding: .utf8)
-        print(convertString!)
         clothingData = Data(convertString!.utf8)
     }
     //decode the data
