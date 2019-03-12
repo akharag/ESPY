@@ -16,7 +16,17 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(false)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+
     }
     
     @IBAction func chooseImage(_ sender: Any) {
@@ -46,7 +56,6 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
         self.present(actionSheet, animated: true, completion: nil)
         
     }
@@ -65,13 +74,13 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
         }
         
         performSegue(withIdentifier: "segueToUpload", sender: Any?.self)
-        
         picker.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nextController = segue.destination as? UploadViewController {
-            nextController.previewImage = image        }
+            nextController.previewImage = image
+        }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

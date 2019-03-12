@@ -13,7 +13,6 @@ class NavigationViewcontroller: UINavigationController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
 }

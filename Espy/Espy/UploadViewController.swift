@@ -19,7 +19,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         ImageView.image = previewImage
     }
     
@@ -42,7 +42,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     @IBAction func SavePressed(_ sender: Any) {
         /*SAVE IMAGE AND RETURN TO MAIN MENU*/
         if tag != ""{
-            print("Save Button Pressed")
             let image = ImageView.image
             //convert image to string
             let imageData = image!.jpegData(compressionQuality: 0.01)! as Data
