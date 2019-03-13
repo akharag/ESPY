@@ -16,6 +16,7 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadColors(viewController: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {

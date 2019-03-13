@@ -13,6 +13,8 @@
 		C2030DCB222BA69F005C9A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2030DC9222BA69F005C9A52 /* LaunchScreen.storyboard */; };
 		C2030DD6222BA6A0005C9A52 /* EspyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2030DD5222BA6A0005C9A52 /* EspyTests.swift */; };
 		C2030DE1222BA6A0005C9A52 /* EspyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2030DE0222BA6A0005C9A52 /* EspyUITests.swift */; };
+		C87FBBC622396106005B817B /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = C87FBBC522396106005B817B /* Montserrat */; };
+		C87FBBC82239731A005B817B /* ColorOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87FBBC72239731A005B817B /* ColorOptions.swift */; };
 		CD374305223343C000E830D9 /* JSONFileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD374304223343C000E830D9 /* JSONFileHandler.swift */; };
 		CD884D2C222E40150024079A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D2B222E40150024079A /* UploadViewController.swift */; };
 		CD884D2E222E40260024079A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD884D2D222E40260024079A /* NavigationViewController.swift */; };
@@ -51,6 +53,8 @@
 		C2030DDC222BA6A0005C9A52 /* EspyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2030DE0222BA6A0005C9A52 /* EspyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspyUITests.swift; sourceTree = "<group>"; };
 		C2030DE2222BA6A0005C9A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C87FBBC522396106005B817B /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
+		C87FBBC72239731A005B817B /* ColorOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorOptions.swift; sourceTree = "<group>"; };
 		CD374304223343C000E830D9 /* JSONFileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileHandler.swift; sourceTree = "<group>"; };
 		CD884D2B222E40150024079A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		CD884D2D222E40260024079A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				C2030DD4222BA6A0005C9A52 /* EspyTests */,
 				C2030DDF222BA6A0005C9A52 /* EspyUITests */,
 				C2030DBE222BA69F005C9A52 /* Products */,
+				C87FBBC522396106005B817B /* Montserrat */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +119,7 @@
 				CD374304223343C000E830D9 /* JSONFileHandler.swift */,
 				C2030DC0222BA69F005C9A52 /* AppDelegate.swift */,
 				C2030DC4222BA69F005C9A52 /* Main.storyboard */,
+				C87FBBC72239731A005B817B /* ColorOptions.swift */,
 				C2030DC7222BA69F005C9A52 /* Assets.xcassets */,
 				C2030DC9222BA69F005C9A52 /* LaunchScreen.storyboard */,
 				C2030DCC222BA69F005C9A52 /* Info.plist */,
@@ -244,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87FBBC622396106005B817B /* Montserrat in Resources */,
 				C2030DCB222BA69F005C9A52 /* LaunchScreen.storyboard in Resources */,
 				C2030DC8222BA69F005C9A52 /* Assets.xcassets in Resources */,
 				C2030DC6222BA69F005C9A52 /* Main.storyboard in Resources */,
@@ -275,6 +282,7 @@
 				CD374305223343C000E830D9 /* JSONFileHandler.swift in Sources */,
 				CD884D36222E41070024079A /* MainMenuViewController.swift in Sources */,
 				CD884D2E222E40260024079A /* NavigationViewController.swift in Sources */,
+				C87FBBC82239731A005B817B /* ColorOptions.swift in Sources */,
 				CD884D3A222E558E0024079A /* GalleryViewController.swift in Sources */,
 				C2030DC1222BA69F005C9A52 /* AppDelegate.swift in Sources */,
 				CD884D2C222E40150024079A /* UploadViewController.swift in Sources */,

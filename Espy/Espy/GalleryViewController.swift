@@ -14,9 +14,11 @@ class GalleryViewController : UIViewController {
     @IBOutlet weak var galleryImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadColors(viewController: self)
+        
         var loadItems = [Clothing]()
         var images = [UIImage]()
+        
 
         do{
             loadItems = try loadFromJSONFile(filename: "wardrobe")

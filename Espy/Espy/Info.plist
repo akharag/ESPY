@@ -2,6 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Monterrat-Regular.ttf</string>
+		<string>Monterrat-Black.ttf</string>
+		<string>Monterrat-BlackItalic.ttf</string>
+		<string>Monterrat-Bold.ttf</string>
+		<string>Monterrat-BoldItalic.ttf</string>
+		<string>Monterrat-ExtraBold.ttf</string>
+		<string>Monterrat-ExtraBoldItalic.ttf</string>
+		<string>Monterrat-ExtraLight.ttf</string>
+		<string>Monterrat-ExtraLightItalic.ttf</string>
+		<string>Monterrat-Italic.ttf</string>
+		<string>Monterrat-Light.ttf</string>
+		<string>Monterrat-LightItalic.ttf</string>
+		<string>Monterrat-Medium.ttf</string>
+		<string>Monterrat-MediumItalic.ttf</string>
+		<string>Monterrat-SemiBold.ttf</string>
+		<string>Monterrat-SemiBoldItalic.ttf</string>
+		<string>Monterrat-Thin.ttf</string>
+		<string>Monterrat-ThinItalic.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

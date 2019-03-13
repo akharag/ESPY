@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-//https://www.youtube.com/watch?v=PWgRz4jqICI
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     @IBOutlet weak var ImageView: UIImageView!
@@ -19,7 +18,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadColors(viewController: self)
         ImageView.image = previewImage
     }
     
