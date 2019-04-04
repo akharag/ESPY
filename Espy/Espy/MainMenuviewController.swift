@@ -44,7 +44,6 @@ class MainMenuViewController: UIViewController, UIImagePickerControllerDelegate,
                 self.present(imagePickerController, animated: true, completion: nil)
                 imagePickerController.allowsEditing = true
             }
-                
             else
             {
                 print("Camera not available")

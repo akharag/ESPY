@@ -14,6 +14,7 @@ class OutfitMakerViewerController: UIViewController{
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var shoesView: UIView!
+    
     @IBOutlet weak var topImageView: UIImageView!
     @IBOutlet weak var bottomImageView: UIImageView!
     @IBOutlet weak var shoesImageView: UIImageView!
@@ -22,6 +23,8 @@ class OutfitMakerViewerController: UIViewController{
     var bottomIndex = 0
     var shoeIndex = 0
     var divisor:CGFloat!
+    var padding:CGFloat = 0.0
+    var headerSize:CGFloat = UIScreen.main.bounds.size.height * 0.035
     
     var topImages = [UIImage]()
     var bottomImages = [UIImage]()
@@ -54,6 +57,11 @@ class OutfitMakerViewerController: UIViewController{
                 }
             }
         }
+        
+        padding = (UIScreen.main.bounds.size.height * 0.01) + bottomView.frame.size.height
+        bottomView.center = CGPoint(x: UIScreen.main.bounds.size.width*0.5,y: UIScreen.main.bounds.size.height*0.5 + headerSize)
+        topView.center = CGPoint(x: bottomView.center.x, y: bottomView.center.y - padding)
+        shoesView.center = CGPoint(x: bottomView.center.x, y: bottomView.center.y + padding)
      
         if topImages.isEmpty {
             print("No TOP image found")
@@ -77,13 +85,18 @@ class OutfitMakerViewerController: UIViewController{
     @IBAction func panTop(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
         let point = sender.translation(in: view)
+        let viewX = topView.center.x
+        let origin = CGPoint(x: viewX, y: topView.center.y )
+        //let variable = origin
         let xFromCenter = card.center.x - view.center.x
         
-        card.center = CGPoint(x: view.center.x + point.x , y: view.center.y - 230)
+        card.center = CGPoint(x: topView.center.x + point.x , y: topView.center.y)
         card.transform = CGAffineTransform(rotationAngle: xFromCenter/divisor)
         
+       print(origin.x)
+        
         if sender.state == .ended{
-            if card.center.x < 50{
+            /*if card.center.x < 50{
                 UIView.animate(withDuration: 0.2,
                                animations: {
                                 card.center = CGPoint(x: self.view.center.x-400, y: self.view.center.y + -200)
@@ -91,7 +104,7 @@ class OutfitMakerViewerController: UIViewController{
                 })
                 card.center = CGPoint(x: self.view.center.x, y: self.view.center.y + -230)
                 card.transform = CGAffineTransform.identity
-                card.frame = CGRect(x: self.view.center.x, y: self.view.center.y, width: card.frame.size.width * 0.2, height: card.frame.size.width * 0.2)
+                card.frame = CGRect(x: origin.x, y: origin.y , width: card.frame.size.width * 0.2, height: card.frame.size.width * 0.2)
                 //load next picture
                     //check if out of bounds
                 if( topIndex + 1 < topImages.count ){
@@ -104,7 +117,7 @@ class OutfitMakerViewerController: UIViewController{
                 }
                 UIView.animate(withDuration: 0.2,
                                animations: {
-                                card.frame = CGRect(x: self.view.center.x, y: self.view.center.y + -230, width: card.frame.size.width / 0.2, height: card.frame.size.width / 0.2)
+                                card.frame = CGRect(x: origin.x, y: origin.y, width: card.frame.size.width / 0.2, height: card.frame.size.width / 0.2)
                                 card.alpha = 1
                                 
                 })
@@ -113,13 +126,13 @@ class OutfitMakerViewerController: UIViewController{
                                animations: {card.center = CGPoint(x: self.view.center.x+400, y: self.view.center.y + -200)
                                 card.alpha = 0
                 })
-            } else{
-                UIView.animate(withDuration: 0.2, animations: {card.center = CGPoint(x: self.view.center.x, y: self.view.center.y + -230)
+            } else{*/
+                UIView.animate(withDuration: 0.2, animations: {card.center = CGPoint(x: origin.x, y: origin.y)
                     card.transform = CGAffineTransform.identity
 
                 })
 
-            }
+            //}
         }
     }
     
